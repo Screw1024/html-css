@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			width: 183px;
+			height: 130px;
+			border: 1px solid red;
+			overflow: hidden;
+			/*高度不怎么改变，注意变化的10px宽度*/
+		}
+		div img{
+			width: 193px;
+			height: 130px;
+			transition: all 0.4s;
+			/*指定变化的对象和执行时间*/
+		}
+		div:hover img{
+			margin-left: -10px;
+			/*达到将图片向左移动10px的效果，类似滑动门的效果*/
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="1.jpg">
+	</div>	 
+</body>
+</html>

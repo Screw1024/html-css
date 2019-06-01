@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		img{
+			width: 400px;
+			height: auto;
+			animation: pengpeng 1.6s infinite;
+		}
+		@keyframes pengpeng{
+			0%{
+				transform: scale(0.5);
+			}
+			50%{
+				transform: scale(0.7);
+			}
+			100%{
+				transform: scale(0.5);
+			}
+		}
+		/*动画定义以后，有0到100%的状态，可以自己定义。
+		定义以后，只需调用动画的名字，任何元素都可以使用
+		如果就是开始和结尾两个状态，可以from到to表示*/
+	</style>
+</head>
+<body>
+	<img src="img/1.jpg">
+</body>
+</html>

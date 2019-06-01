@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			width: 170px;
+			height: 250px;
+			border: 1px solid red;
+			margin: 350px auto;
+			position: relative;
+		}
+		div img{
+			width: 100%;
+			height: 100%;
+			/*图片长宽比例不一致，将图片填充到相框中*/
+			position: absolute;
+			top: 0;
+			left: 0;
+			transition: all 1.4s;
+			/*为所有的动画属性执行过渡，执行时间为1.6s*/
+			/*如果不添加过渡动画，直接变换到最终的位置，不美观*/
+			transform-origin: top right;
+			/*默认以图片的中心点为旋转点，改成右上角点*/
+		}
+		div:hover img:first-child{
+            transform: rotate(45deg);
+            /*一共8一幅图片共360deg，平均45deg*/
+		}
+		div:hover img:nth-child(2){
+            transform: rotate(90deg);
+	    }
+	    div:hover img:nth-child(3){
+            transform: rotate(135deg);
+	    }
+	    div:hover img:nth-child(4){
+            transform: rotate(180deg);
+	    }
+	    div:hover img:nth-child(5){
+            transform: rotate(225deg);
+	    }
+	    div:hover img:nth-child(6){
+            transform: rotate(270deg);
+	    }
+	    div:hover img:nth-child(7){
+            transform: rotate(315deg);
+	    }
+        div:hover img:last-child{
+            transform: rotate(360deg);
+            /*第一幅位置没有变换，但是加上动画，就会旋转一圈，好看*/
+		} 
+	</style>
+</head>
+<body>
+	<div>
+		<img src="img/1.jpg">
+		<img src="img/2.jpg">
+		<img src="img/11.jpg">
+		<img src="img/12.jpg">
+		<img src="img/13.jpg">
+		<img src="img/14.jpg">
+		<img src="img/16.jpg">
+		<img src="img/18.jpg">
+		<!-- css的层叠属性 -->
+	</div>
+</body>
+</html>

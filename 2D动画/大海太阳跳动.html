@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding: 0;
+		}
+		/*去除所有边框，不然背景会留白边*/
+		html,body{
+			width: 100%;
+			height: 100%;
+			background-color: #0ea9b1;
+			overflow: hidden;
+			/*图片会撑开页面，会有滚动条*/
+		}                 
+		/*浏览器全屏*/
+		img{
+			width: 100%;
+			height: auto;
+			position: absolute;
+			bottom: 0;
+			left: 0; 
+		}
+		img:first-child{
+            animation: qifu 2s ease infinite;
+		}
+		img:last-child{
+            animation: qifu 3s ease-in infinite;
+		}
+
+		@keyframes qifu{
+            0%{
+            	bottom: 0;
+            }
+            50%{
+            	bottom: -30px;
+            }
+            100%{
+            	bottom: 0; 	
+            }
+		}
+
+		.sun{
+			width: 100px;
+			height: 100px;
+			margin: 100px;
+			position: relative;
+		}
+		.sun::before, .sun::after{
+			content: "";
+            /*::after和::before伪元素，必须定义content*/
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			
+			/*两个小太阳的盒子垂直居中*/
+			width: 50px;
+			height: 50px;
+			background: rgba(255,255,255,0.8);
+			border-radius: 50%;
+			animation: sun 2.8s infinite;
+			/*动画覆盖上面的过渡效果，写到下面*/
+		}
+		.sun::after{
+			width: 100px;
+			height: 100px;
+			background: rgba(255,255,255,0.6); 
+			animation: sun 3.4s infinite;
+		}
+		@keyframes sun{
+            0%{ 	 
+            	transform: translate(-50%,-50%) scale(1);
+            	box-shadow: 0px 0px 5px rgba(255,255,255,0.7);
+            }
+            50%{
+            	transform: translate(-50%,-50%) scale(1.2);
+            	box-shadow: 0px 0px 30px rgba(255,255,255,0.7);
+
+            }
+            100%{
+            	transform: translate(-50%,-50%) scale(1);
+            	box-shadow: 0px 0px 5px rgba(255,255,255,0.7);
+            }
+            /*这里如果先执行缩放，后执行平移效果不一样，有先后顺序试试*/
+		}
+	</style>
+</head>
+<body>
+	<div class="sun"></div>
+	<img src="img/1.png">
+	<img src="img/2.png">
+</body>
+</html>

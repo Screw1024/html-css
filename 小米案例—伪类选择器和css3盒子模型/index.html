@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			width: 632px;
+			height: 340px;
+			position: relative;
+			/*子决父相*/
+			border-radius: 10px;
+			overflow: hidden;
+			/*父盒子还是默认的content-box模型,加上外边距会超出*/
+		}
+		div:hover::after{
+			/*鼠标经过之后，添加伪元素选择器*/
+			content: "";
+			position: absolute;
+			/*内容尾部添加::after伪类选择器，也是盒子，只不过是行内元素*/
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			border: 20px solid rgba(199,91,91,0.5);
+			box-sizing: border-box;
+			/*转换为CSS3盒子模型，内减式*/
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="mi.jpg">
+	</div>
+</body>
+</html>

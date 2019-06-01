@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			background: url(img/background.jpg) repeat-x;
+		}
+		.nav a{
+			height: 33px;
+			line-height: 33px;
+			/*元素高度和行高一致，保证文字居中*/
+			color: #fff;
+			text-decoration: none;
+			background: url(img/normol.png) no-repeat;
+			display: inline-block;
+			padding-left: 15px;
+			/*这里将字体向右移动15px，看上去是将滑动门往左移动，但是字体位置改变了*/
+		}
+		.nav span{
+            background: url(img/normol.png) no-repeat right;
+            /*将滑动门的图片右边对齐，然后距离右边15px，可以显示右边半边*/
+            display: inline-block;
+            padding-right: 15px;
+            /*这里没有写行高是因为可以继承上面的父级元素，这里可以直接省略
+            同时上面的父级元素定义了行高，其实高度也可以省略*/
+		}
+		.nav a:hover, .nav a:hover span{
+			background-image: url(img/hover.png);
+			/*这里注意只要将背景图片替换即可,不要将写成background：url()，造成错误
+			同时这里不能添加 no-repeat不然没有可能是这样的话，就会算两个no-repeat有冲突
+			*/
+		}
+	</style>
+</head>
+<body>
+	<ul class="nav">
+		<li>
+			<a href="#">
+				<span>首页</span>
+			</a>
+		</li>
+	</ul>
+</body>
+</html>

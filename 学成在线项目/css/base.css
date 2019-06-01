@@ -1,0 +1,48 @@
+*{
+	box-sizing: border-box;
+	/*全部定义为内减式盒子模型*/
+}
+a{
+	text-decoration: none;
+}
+body{
+	background-color: #F7F4F4;
+}
+li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+img{
+	border: 0;
+	vertical-align: middle;
+	/*主要是为了解决图片和文字之间的垂直居中问题*/
+}
+.w{
+	width: 1200px;
+	margin: auto;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?rsc7tj');
+  src:  url('../fonts/icomoon.eot?rsc7tj#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?rsc7tj') format('truetype'),
+    url('../fonts/icomoon.woff?rsc7tj') format('woff'),
+    url('../fonts/icomoon.svg?rsc7tj#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*引入字体图标,一定要注意调用fonts文件夹路径一定要正确*/
+.mySyllabus dl,.mySyllabus dd,.mySyllabus dt{
+	padding: 0;
+	margin: 0;
+}
+.mySyllabus h5,.mySyllabus a,.mySyllabus ul,.mySyllabus li{
+	padding: 0;
+	margin: 0;
+}
+.pro-bd li,.pro-bd ul{
+	margin: 0;
+	padding: 0;
+}

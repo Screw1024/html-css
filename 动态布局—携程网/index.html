@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		html,body{
+			min-width: 320px;
+			max-width: 540px;
+			margin:0 auto;
+		}
+		header img{
+			height: 108px;
+			width: auto;
+		}
+		nav{
+			border: 1px solid #ccc;
+			padding: 4px;
+		}
+		nav a,nav em{
+			text-decoration: none;
+			font-size: 14px;
+			text-shadow: 0 2px 1px rgba(0,0,0,.2);
+			color: #fff;
+			/*非常占内存*/
+		}
+
+		.row{
+			height: 90px;
+			display: flex;
+			/*为父级盒子添加flex，可以完成伸缩布局*/
+			border-radius: 5px;
+			/*为父盒子添加圆角*/
+			overflow: hidden;
+			/*子元素会继续冒出来，要隐藏*/
+			margin-bottom: 5px;
+		}
+		.row div{
+			height: 100%;
+			flex: 1;
+			/*为父级盒子添加flex属性后，下面的子盒子每个占一份*/
+			background-color: #ff697a;
+			border-right: 1px solid #fff;
+		}
+		.row div:nth-child(3){
+			border-right: 0;
+		}
+		.row div a{
+			display: block;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		.row em{
+			display: block;
+			height: 45px;
+			text-align: center;
+			line-height: 45px;
+			font-style: normal;
+		}
+		.row i{
+			display: block;
+			width: 43px;
+			height: 43px;
+			margin: -5px auto 0;
+			background:url(img/ctrip.png) no-repeat 0 -127px;
+			/*-webkit-background-size:104px;*/
+			background-size: 104px;
+			/*宽度改为原来的一半，第二项自动等比例缩放*/
+		}
+		.row div a .jipiao{
+            background-position: 0 -288px;
+		} 
+		.row div a .ggg{
+			background-position: 0 -190px;
+		}
+		.row3{
+			display: flex;
+			flex-direction: column;
+			/*垂直动态分布*/
+		}
+		.row3 a{
+            flex: 1;
+            /*上下两个各占一半*/
+            text-align: center;
+            line-height: 45px;
+            color: #fff;
+		}
+		.row3 a:first-child{
+			border-bottom: 1px solid  #fff;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="img/banner.jpg">
+	</header>
+	<nav>
+		<div class="row">
+			<div>
+				<a href="#">
+					<em>酒店</em>
+					<i></i>
+				</a>
+			</div>
+			<div class="row3">
+				<a href="#">海外酒店</a>
+				<a href="#">特价酒店</a>
+			</div>
+			<div class="row3">
+				<a href="#">团购</a>
+				<a href="#">特色民宿</a>
+			</div>
+		</div>
+		<div class="row">
+			<div>
+				<a href="#">
+					<em>酒店</em>
+					<i class="jipiao"></i>
+				</a>
+			</div>
+			<div class="row3">
+				<a href="#">海外酒店</a>
+				<a href="#">特价酒店</a>
+			</div>
+			<div class="row3">
+				<a href="#">团购</a>
+				<a href="#">特色民宿</a>
+			</div>
+		</div>
+		<div class="row">
+			<div>
+				<a href="#">
+					<em>酒店</em>
+					<i class="ggg"></i>
+				</a>
+			</div>
+			<div class="row3">
+				<a href="#">海外酒店</a>
+				<a href="#">特价酒店</a>
+			</div>
+			<div class="row3">
+				<a href="#">团购</a>
+				<a href="#">特色民宿</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="row3">
+				<a href="#">海外酒店</a>
+				<a href="#">特价酒店</a>
+			</div>
+			<div class="row3">
+				<a href="#">海外酒店</a>
+				<a href="#">特价酒店</a>
+			</div>
+			<div class="row3">
+				<a href="#">团购</a>
+				<a href="#">特色民宿</a>
+			</div>
+		</div>
+	</nav>
+</body>
+</html>

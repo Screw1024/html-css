@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	    *{
+	    	margin: 0;
+	    	padding: 0;
+	    }
+	    body{
+	    	perspective: 1000px;
+	    	/*视距，数值越小代表离眼睛距离越小，显示的效果越大*/
+	    }
+		div{
+			position: relative;
+			margin: 300px auto;
+			width: 350px;
+			height: 350px;
+		}
+		div img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			transition: all 2s;
+		}
+		div:hover img{
+			transform: rotateY(180deg);
+			/*同样的单位也是角度*/
+		}
+		div img:last-child{
+			backface-visibility: hidden;
+			/*背向屏幕时，是否可见*/
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="img/hou.svg">
+		<img src="img/qian.svg">
+	</div>
+</body>
+</html>

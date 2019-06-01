@@ -1,0 +1,326 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/*任何网页的第一步，去掉默认属性*/
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/*将页面上所有的li和 a标签默认的样式去掉*/
+
+body{
+    background-color: #fafafa;
+}
+/*这个颜色主要为了谐音发发发，电商平台*/
+
+.header{
+    height: 100px;
+    background-color: #fff;  
+}
+/*设置头部的通栏*/
+
+.inner{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    line-height: 100px;
+}
+/*版心的宽度为1200px，头部通栏内部的元素,将行高设置为字体高度
+即可使字体居中，同时行高会继承在父级元素中定义行高可以使子集元素都居中*/
+
+.logo{
+    float: left;
+}
+.nav{
+    float: right; 
+}
+
+.nav li{
+    display: inline-block;
+    margin: 0 20px;
+}
+/*导航栏一行排列*/
+.nav li a{
+    color: #333;
+}
+.nav li a:hover{
+    color: #2288f6;
+}
+
+
+
+/*以上导航栏部分的样式*/
+
+
+
+.banner{
+    height: 620px;
+    background: url(../img/banner.jpg) no-repeat top center;
+}
+
+
+/*主体logo模块*/
+
+
+
+.service{
+    margin: 75px auto 0;
+    /*第三个参数表示距离底部的外边距,设置为0，不然会影响到下面经典网站的排列 */
+    width: 1055px;
+    /*height: 500px;*/
+    /*高度就为了好测试，写完这个模块之后清除,但是会有浮动，如果接着写会跑到上面去，需要清除浮动*/
+}
+/*两个主体logo和这个下面紧接着的案例模块是一样的头标题用一样的css模板即可*/
+.service-head{
+    border-top: 1px solid #ccc;
+    margin: 0 25px;
+}
+.service-head h3{
+    width: 163px;
+    height: 52px;
+    margin: 0 auto;
+    margin-top: -15px;
+}
+/*这里不能写成margin：-15px auto，这样会使h3的下边框也为-15px，造成p元素的内容往上平移*/
+.service-head p{
+    font-size: 12px;
+    color: #666;
+    line-height: 26px;
+    text-align: center;
+    width: 810px;
+    /*原本盒子是跟父级元素一样的大小，现在变小了之后内容居中但是盒子没有对齐，通过下面套路块级元素居中对齐*/
+    margin: 0 auto;
+}
+/*行高的英文的距离是基线和基线之间的距离，对于中文方块字来说就是前面一行底线和第二行底线之间的距离*/
+
+.service-body{
+   margin-top: 40px; 
+   overflow: hidden;
+   /*清除浮动，不然会影响下面经典案例的会跑到上面去*/
+}
+.service-body li{
+    width: 318px;
+    height: 510px;
+    background-color: #fff;
+    float: left;
+    border: 1px solid #e7e8e9;
+}
+.mian-serviceBox{
+    margin: 0 45px;
+    /*三个这样的盒子就把父级元素的盒子挤满，只要将中间盒子的左右边距都设为45即可*/
+}
+
+.service-body img{
+    margin: 40px 35px;
+}
+.service-body h3{
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.service-body p{
+    color: #666;
+    width: 235px;
+    /*这段文字的宽度比上面的图片宽度小一些*/
+    margin: 0 auto;
+    line-height: 25px;
+}
+.service-body a{
+    display: block;
+    width: 148px;
+    height: 38px;
+    border: 1px solid #ff9412;
+    text-decoration: none;
+    margin: 30px auto;
+    text-align: center;
+    line-height: 38px;
+    /*行间距设置为字体的高度，即可将字体垂直居中*/
+    color: #ff9412;
+    font-size: 12px;
+    border-radius: 5px;
+}
+.service-body a:hover{
+    color: #fff;
+    background-color: #ff9412;
+}
+
+.mian-serviceBox img{
+    margin: 32px 35px;
+    /*中间图片高度多了16px，通过上下边距减半可以对齐*/
+}
+.mian-serviceBox a{
+    margin: 56px auto;
+    /*中间的文字是五段，少一行，行高26px，将这里的a标签上外边距多设置26px即可*/
+}
+
+
+
+/*我的服务模块*/
+
+
+.case-bgc{
+    margin-top: 75px;
+    width: 100%;
+    background-color: #ffffff;
+    display: inline-block;
+}
+/*上面我们的服务模块跟这里的实例模块，颜色有差异，这个这些代码当作背景盒子即可*/
+.case{
+    width: 1055px;
+    margin: 75px auto 75px;
+}
+
+
+.case-body{
+    margin-top: 80px;
+    position: relative;
+    /*设置为相对定位，为箭头的定位设置基础，子决夫相*/
+}
+.case-body li{
+    width: 325px;
+    height: 210px;
+    background-color: blue;
+    float: left;
+    position: relative;
+    /*为了下面的半透明的效果，这里要用绝对定位，下面的相对定位。口诀：子决夫相*/
+}
+.main-caseBox{
+    margin: 0 40px;
+}
+.text{
+    height: 45px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    font-size: 12px;
+}
+.mask{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5) url(../img/sercher.png) center no-repeat;
+    /*选中之后颜色稍微亮一点*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    /*默认看不见，鼠标悬停激活*/
+}
+.case-body li:hover .mask{
+    display: block
+   /* block不光有转换为块级元素的作用，还有显示的意思，这里还有一个
+    作用，默认转换为块级元素*/
+}
+.left-arrow,.right-arrow{
+    width: 60px;
+    height: 60px;
+    background: rgba(0,0,0,0.2);
+    /*左箭头和右箭头为了方便直接通过a便签里面放左括号和右括号写出来*/
+    position: absolute;
+    /*通过设置相对定位，完成特定位置的布局。同时默认转换为行内块元素，不用再写出来*/
+    top: 50%;
+    margin-top: -30px;
+    /*套路，向想要方向移动50%,再往回走半个盒子*/
+    /*同时，父元素没有清除浮动，位置不正确，需要将父元素清除浮动
+    但是如果同overflow清除浮动，超出部分不会显示，用:after伪元素清除浮动*/
+    text-align: center;
+    line-height: 60px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 50%;
+    /*圆角直接设置为50%就能得到圆*/
+}
+.clearfix:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix{
+    *zoom:1;
+}
+/*IE6/7专用，zoom前面的*其余浏览器碰到直接跳过*/
+
+.left-arrow{
+    left: -90px;
+}
+.right-arrow{
+    right: -90px;
+}
+.left-arrow:hover,.right-arrow:hover{
+    background: rgba(0,0,255,0.4);
+}
+
+
+/*经典案例模块结束*/
+
+
+.media-body{
+    margin-top: 35px;
+    width: 1048px;
+    height: 240px;
+    overflow: hidden;
+    /*这里相当于li的爷爷级元素，通过控制宽度将li标签最右边显示的边框切除
+    可能有问题：为什么爷爷辈元素比夫父元素还小一点而父级元素能够在爷爷元素里面
+    我的理解是，可以类比一个小盒子里面放了一个宽度一样的盒子，但是长度却高了一点*/
+}
+.media-body ul{
+    width: 1070px;
+    /*li的父盒子，但是比爷爷大，不然最右边的一个会掉下去*/
+}
+.media-body li{
+    width: 210px;
+    height: 65px;
+    float: left;
+    border-bottom: 1px dashed #ccc;
+    border-right: 1px dashed #ccc;
+    text-align: center;
+    padding-top: 15px;
+}
+
+
+/*合作媒体模块结束*/
+
+
+.footer{
+    height: 165px;
+    background-color: #212425;
+    margin-top: 75px;
+    overflow: hidden;
+    /*下面也要mergin-top直接写没有效果，因为嵌套盒子有塌陷的bug，这是一种解决方法
+    还有一种方法是此父元素条件内边距或者外边距设为1px*/
+}
+.subnav{
+    text-align: center;
+    margin-top: 50px;
+    color: #f0f1f1;
+    font-size: 14px;
+    /*将a标签后面的分割线，颜色作为文本处理*/
+}
+.subnav a{
+    color: #f0f1f1;
+    text-decoration: none;
+    padding: 0 5px;
+    font-size: 14px;
+}
+.subnav a:hover{
+    color: #2288f6;
+    text-decoration: underline;
+}
+.footer p{
+    text-align: center;
+    color: #888888;
+    margin-top: 30px;
+}
