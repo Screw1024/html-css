@@ -7,7 +7,7 @@ html和css加一些简单js做成的小特效
 
 #### 使用步骤
 
-- 找到index.html
+- 找到对应html文件
 - 在浏览器中打开即可
 
 #### TIPS
